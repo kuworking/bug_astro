@@ -1,0 +1,18 @@
+---
+const { content } = Astro.props;
+---
+
+<html lang={ content.lang || 'en' }>
+  <head>
+    <meta charset="utf-8">
+
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <title>{content.title}</title>
+    <link rel="stylesheet" href={Astro.resolve('../styles/global.css')}>
+  </head>
+  <body>
+        <div>{content.astro?.headers.filter(h => h.depth === 1).map(h => <a href="">{h.text}</a>)}</div>
+    <slot/>
+  </body>
+</html>
