@@ -10,3 +10,7 @@ This example showcases Astro's [built-in Markdown support](../../docs/markdown.m
 
 - `src/pages/index.astro` uses Astro's `<Markdown>` component.
 - `src/pages/other.md` is a treated as a page entrypoint and uses a `layout`.
+
+
+BUG
+added `<div>{content.astro?.headers.filter(h => h.depth === 1).map(h => <a href="">{h.text}</a>)}</div>` to the layout
