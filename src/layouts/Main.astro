@@ -14,7 +14,20 @@ const { content } = Astro.props
   </head>
 
   <body>
-    <slot />
+    <div class="Block">
+      <slot />
+    </div>
     <Cookies client:visible />
   </body>
 </html>
+
+<style>
+  .Block {
+    max-width: 800px;
+    transition: max-width 0.2s ease;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 100px 10px 5px 10px; /* the 5px is needed, kind of bug for margin of other elements */
+  }
+</style>

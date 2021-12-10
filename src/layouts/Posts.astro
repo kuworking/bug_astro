@@ -2,10 +2,13 @@
 import Main from './Main.astro'
 import Header from '../components/Header.astro'
 
+import { LikePost } from '../components/js/LikePost.jsx'
+
 const { content } = Astro.props
 ---
 
 <Main {content}>
   <Header />
   <slot />
+  <LikePost client:visible />
 </Main>

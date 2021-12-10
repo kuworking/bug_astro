@@ -3,6 +3,8 @@ import { Markdown } from 'astro/components'
 import Main from '../layouts/Main.astro'
 import Header from '../components/Header.astro'
 
+const allPosts = await Astro.fetchContent('./*.md')
+console.log(allPosts)
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
@@ -12,5 +14,9 @@ import Header from '../components/Header.astro'
 
   <Markdown>
     [test](./test)
+    [resources](./resources)
   </Markdown>
+
+  <div>
+  </div>
 </Main>
