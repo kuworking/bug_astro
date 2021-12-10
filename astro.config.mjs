@@ -7,11 +7,10 @@
 // You can disable this by removing "@ts-check" and `@type` comments below.
 
 // @ts-check
-export default /** @type {import('astro').AstroUserConfig} */ (
-  {
-    // Set "renderers" to "[]" to disable all default, builtin component support.
-    // renderers: [],
-    renderers: ['@astrojs/renderer-react'],
-    buildOptions: { sitemap: true },
-  }
-);
+export default /** @type {import('astro').AstroUserConfig} */ ({
+  // Enable the React renderer to support React JSX components.
+  renderers: ['@astrojs/renderer-react'],
+  buildOptions: {
+    sitemap: true,
+  },
+})

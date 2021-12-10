@@ -1,18 +1,17 @@
 ---
-const { content } = Astro.props;
+const { content } = Astro.props
 ---
 
-<html lang={ content.lang || 'en' }>
+<html lang={content.lang || 'en'} class="theme1 typo1">
   <head>
-    <meta charset="utf-8">
-
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-
-    <title>{content.title}</title>
-    <link rel="stylesheet" href={Astro.resolve('../styles/global.css')}>
+    <title>__</title>
+    <link rel="sitemap" href="/sitemap.xml" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charSet="utf-8" />
+    <meta name="robots" content="index, follow" />
   </head>
+
   <body>
-        <div>{content.astro?.headers.filter(h => h.depth === 1).map(h => <a href="">{h.text}</a>)}</div>
-    <slot/>
+      <slot />
   </body>
 </html>

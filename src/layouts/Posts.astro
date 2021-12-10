@@ -1,0 +1,11 @@
+---
+import Main from './Main.astro'
+import Header from '../components/Header.astro'
+
+const { content } = Astro.props
+---
+
+<Main {content}>
+  <Header />
+  <slot />
+</Main>
