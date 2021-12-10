@@ -45,16 +45,14 @@ export const Cookies = () => {
 
   return (
     <div id="cookie_panel" data-nosnippet="data-nosnippet">
-      <h2>Datos almacenados</h2>
-      <div>
-        Utilizamos Google Analytics con datos anonimizados para generar estadísticas de la página web (con tu permiso)
-      </div>
+      <h2>Show</h2>
+      <div>Message</div>
       <div>
         <button id="cookie_ok" className="OK" onClick={agree}>
-          De Acuerdo
+          yes
         </button>
         <button id="cookie_no" onClick={disagree}>
-          No quiero
+          no
         </button>
       </div>
     </div>
