@@ -4,6 +4,7 @@ import './Cookies.css'
 const wait = ms => new Promise((res, rej) => setTimeout(() => res('timed'), ms))
 
 const grantit = () => {
+  console.log('grantit')
   if (typeof window !== 'undefined') {
     if (window.dataLayer)
       window.dataLayer.push('consent', 'update', {
@@ -18,9 +19,11 @@ export const Cookies = () => {
   // show the panel, only if js is enabled and cookie not there
   useEffect(() => {
     const item = window.localStorage.getItem('kuworking_cookies')
+    console.log(item)
     if (!item) {
       ;(async () => {
         await wait(1000)
+        console.log(document.getElementById('cookie_panel').style.display)
         document.getElementById('cookie_panel').style.display = 'flex'
         await wait(50)
         document.getElementById('cookie_panel').style.opacity = 1
