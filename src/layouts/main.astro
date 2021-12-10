@@ -1,4 +1,6 @@
 ---
+import { Cookies } from '../components/js/Cookies.jsx'
+
 const { content } = Astro.props
 ---
 
@@ -13,5 +15,6 @@ const { content } = Astro.props
 
   <body>
       <slot />
+          <Cookies client:visible />
   </body>
 </html>
