@@ -2,7 +2,7 @@
 import { Cookies } from '../components/js/Cookies.jsx'
 
 const { content } = Astro.props
-const title = content.title.replaceAll('#', '')
+const title = content.title?.replaceAll('#', '')
 const snippet = content.snippet?.replaceAll('#', '')
 
 const canonical = 'https://www.kuworking.com' + Astro.request.url.pathname
