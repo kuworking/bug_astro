@@ -1,0 +1,123 @@
+/* 
+global styles for kuworking.com
+*/
+
+body {
+  font-family: var(--font);
+  font-size: var(--font_size);
+  line-height: var(--line_height);
+  background: var(--color_background);
+  color: var(--color_text);
+  transition: background 0.2s ease, color 0.3s ease;
+}
+
+p {
+  margin: var(--p_margin);
+}
+
+ul,
+ol {
+  margin: 40px 40px 30px 40px;
+}
+li {
+  margin-top: 0px;
+}
+code {
+  font-family: Inconsolata, 'Ubuntu Mono', monospace;
+  display: inline-block;
+  font-weight: 400;
+  border-radius: 3px;
+  padding: 1px 4px;
+  background: var(--color_em_background);
+  color: var(--color_em_text);
+  color: #d4d4d4;
+  background: #1e1e1e;
+  transition: background 0.2s ease, color 0.3s ease;
+  font-size: 0.9em;
+}
+
+pre > code {
+  background: unset;
+  color: unset;
+  font-size: unset;
+}
+
+pre {
+  min-width: fit-content;
+  border-radius: 8px;
+  padding: 1em;
+  margin: 20px 0px;
+  font-size: 1.5rem;
+}
+
+em {
+  font-style: normal;
+  padding: 1px 4px;
+  border-radius: 2px;
+  background: var(--color_em_background);
+  color: var(--color_em_text);
+  transition: background 0.2s ease, color 0.3s ease;
+}
+
+a {
+  color: #ff4300;
+  text-decoration: underline;
+  font-weight: normal;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: #5385cc;
+  text-decoration: underline;
+}
+
+blockquote {
+  margin: var(--bq_margin);
+  padding: var(--bq_padding);
+  border-radius: 8px;
+  background: var(--color_bq_background);
+  color: var(--color_bq_text);
+  transition: background 0.4s ease, color 0.5s ease;
+}
+
+blockquote em {
+  font-style: normal;
+  padding: 1px 4px;
+  border-radius: 2px;
+}
+
+/* prettier-ignore */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  margin: 20px 0px 5px 0px;
+  line-height: 1;
+}
+
+/* 25em: 400px, 37.5em: 600px, 56.25em: 900px */
+@media (min-width: 25em) {
+  h1 {
+    font-size: 2.4rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 37.5em) {
+  h1 {
+    font-size: 3.2rem;
+  }
+  h2 {
+    font-size: 2.4rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin: var(--h1_margin);
+}
+h2 {
+  margin-top: 50px;
+}

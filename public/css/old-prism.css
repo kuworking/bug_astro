@@ -1,0 +1,120 @@
+code[class*='language-'],
+pre[class*='language-'] {
+  background: none;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
+  background: var(--prism-background);
+  color: var(--prism-color);
+}
+
+/* Inline code */
+:not(pre) > code[class*='language-'] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
+.namespace {
+  opacity: 0.7;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.attr-name {
+  color: var(--prism-text);
+}
+.attr-value {
+  color: var(--prism-color);
+}
+.prolog,
+.doctype,
+.cdata,
+.punctuation {
+  color: var(--prism-text);
+}
+.comment {
+  color: var(--prism-text-comment);
+  background: var(--prism-bg-comment);
+}
+.namespace {
+  opacity: 0.7;
+}
+.tag,
+.operator,
+.number,
+.tag-id,
+.selector,
+.atrule-id {
+  color: var(--prism-text);
+}
+.console,
+.property,
+.function {
+  color: var(--prism-color);
+}
+
+.boolean,
+.string,
+.entity,
+.url,
+.control,
+.directive,
+.unit,
+.statement,
+.regex,
+.at-rule,
+.placeholder,
+.variable {
+  color: var(--prism-color);
+}
+.string {
+  color: var(--prism-text);
+}
+.keyword {
+  color: var(--prism-text-dim);
+}
+.deleted {
+  text-decoration-line: line-through;
+}
+.inserted {
+  text-decoration-line: underline;
+}
+.italic {
+  font-style: italic;
+}
+.important,
+.bold {
+  font-weight: bold;
+}
+.important {
+  color: var(--prism-important);
+}
+.highlight-line-active {
+  background-color: var(--prism-highlight);
+}
