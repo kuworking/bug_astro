@@ -1,0 +1,48 @@
+---
+import { Markdown } from 'astro/components'
+import { FontInspiration } from '../components/js/FontInspiration'
+
+import Main from '../layouts/Main.astro'
+import Header from '../components/Header.astro'
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<Main content={{ title: 'kuworking' }}>
+  <Header />
+
+  <Markdown>
+    # Explorador de fuentes de Google
+  </Markdown>
+
+  <FontInspiration client:visible />
+</Main>
+
+<style>
+  .tags {
+    margin-bottom: 100px;
+  }
+  .tag {
+    margin: 50px 0px 0px 0px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .link {
+    color: var(--color_text);
+  }
+  .link:hover {
+    color: #f00;
+  }
+
+  h1 {
+    margin-top: 50px;
+  }
+  ul {
+    margin-top: 10px;
+  }
+  li {
+    margin-top: 0px;
+  }
+</style>
