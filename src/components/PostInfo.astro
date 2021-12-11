@@ -1,0 +1,66 @@
+---
+const { content } = Astro.props
+
+const [year, month, day] = content.date.split('-')
+const mes =
+  month === '01'
+    ? 'Enero'
+    : month === '02'
+    ? 'Febrero'
+    : month === '03'
+    ? 'Marzo'
+    : month === '04'
+    ? 'Abril'
+    : month === '05'
+    ? 'Mayo'
+    : month === '06'
+    ? 'Junio'
+    : month === '07'
+    ? 'Julio'
+    : month === '08'
+    ? 'Agosto'
+    : month === '09'
+    ? 'Setiembre'
+    : month === '10'
+    ? 'Octubre'
+    : month === '11'
+    ? 'Noviembre'
+    : 'Diciembre'
+
+const title = content.title.split('#').map((el, i) => (i % 2 === 0 ? `<span>${el}</span>` : `<em>${el}</em>`))
+---
+
+<div class="post_info">
+  <h1 class="post_title">
+    {title}
+  </h1>
+  <div class="post_date">
+    {mes} del {year}
+  </div>
+  {content.tags.length > 1 ? (
+    <div class="post_tags">
+      tags:{' '}
+      {content.tags?.map(t => (
+        <a href={`/#${t}`}>{t}</a>
+      ))}
+    </div>
+  ) : (
+    ''
+  )}
+</div>
+
+<style>
+  .post_info {
+    font-size: 1.4rem;
+  }
+
+  .post_title {
+    font-size: var(--h1_font_size);
+    line-height: 1.3;
+  }
+  .post_date {
+    color: #666;
+  }
+  .post_tags {
+  }
+</style>

@@ -1,0 +1,22 @@
+---
+const { headers } = Astro.props
+const main_headers = headers.filter(h => h.depth === 1)
+---
+
+<ul class="toc">
+  {main_headers.length > 1 ? (
+    main_headers.map(h => (
+      <li>
+        <a href={`#${h.slug}`}>{h.text}</a>
+      </li>
+    ))
+  ) : (
+    <></>
+  )}
+</ul>
+
+<style>
+  .toc li {
+    margin-top: 0px;
+  }
+</style>
