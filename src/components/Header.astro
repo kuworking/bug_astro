@@ -6,7 +6,7 @@ import { SwitchTheme3 } from './js/SwitchTheme3'
 
 <header>
   <a class="home" aria-label="home" href="/">
-    <div>HOME</div>
+    <div><img src="/images/kuworking.png" alt="hand" />HOME</div>
   </a>
   <div class="parent">
     <SwitchTheme client:visible />
@@ -60,6 +60,11 @@ import { SwitchTheme3 } from './js/SwitchTheme3'
   .home:hover {
     border: 2px solid #e2bdf8;
     transition: border 0.2s ease;
+  }
+
+  .home img {
+    width: 20px;
+    height: 20px;
   }
 
   .parent {
